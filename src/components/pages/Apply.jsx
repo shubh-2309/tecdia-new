@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
+import ApiService from '../../services/api';
 
 const Apply = () => {
   const [searchParams] = useSearchParams();
@@ -25,6 +26,7 @@ const Apply = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
 
@@ -67,13 +69,51 @@ const Apply = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Application submitted:', formData);
-    setIsSubmitting(false);
-    // Handle success/redirect
+    setSubmitStatus(null);
+
+    try {
+      const formDataToSend = new FormData();
+      
+      // Add all form fields
+      Object.keys(formData).forEach(key => {
+        if (key === 'resume' && formData[key]) {
+          formDataToSend.append('resume', formData[key]);
+        } else if (key !== 'resume') {
+          formDataToSend.append(key, formData[key]);
+        }
+      });
+
+      const data = await ApiService.submitApplication(formDataToSend);
+      setSubmitStatus({ type: 'success', message: data.message });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        role: '',
+        experience: '',
+        resume: null,
+        coverLetter: '',
+        portfolio: '',
+        linkedin: '',
+        source: '',
+        availability: '',
+        salary: '',
+        additionalInfo: ''
+      });
+    } catch (error) {
+      console.error('Application submission error:', error);
+      setSubmitStatus({ type: 'error', message: error.message || 'Network error. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const ApplicationPreview = () => (
@@ -496,6 +536,33 @@ const Apply = () => {
                   />
                 </div>
               </div>
+
+              {/* Status Messages */}
+              {submitStatus && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`p-4 rounded-xl mb-4 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-100 text-green-800 border border-green-200' 
+                      : 'bg-red-100 text-red-800 border border-red-200'
+                  }`}
+                >
+                  <div className="flex items-center">
+                    {submitStatus.type === 'success' ? (
+                      <span className="text-2xl mr-3">✅</span>
+                    ) : (
+                      <span className="text-2xl mr-3">❌</span>
+                    )}
+                    <div>
+                      <p className="font-semibold">
+                        {submitStatus.type === 'success' ? 'Application Submitted Successfully!' : 'Submission Failed'}
+                      </p>
+                      <p className="text-sm mt-1">{submitStatus.message}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
 
               {/* Form Actions */}
               <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-tecdia-gray-200">

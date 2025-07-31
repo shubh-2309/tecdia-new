@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import ApiService from '../../services/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
 
@@ -44,10 +47,21 @@ const Contact = () => {
     }
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const data = await ApiService.submitContact(formData);
+      setSubmitStatus({ type: 'success', message: data.message });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setSubmitStatus({ type: 'error', message: error.message || 'Network error. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -293,16 +307,36 @@ const Contact = () => {
                 />
               </div>
               
+              {/* Status Messages */}
+              {submitStatus && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`p-4 rounded-xl mb-4 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-100 text-green-800 border border-green-200' 
+                      : 'bg-red-100 text-red-800 border border-red-200'
+                  }`}
+                >
+                  {submitStatus.message}
+                </motion.div>
+              )}
+
               <motion.button
                 type="submit"
+                disabled={isSubmitting}
                 whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(255, 107, 0, 0.3)",
+                  scale: isSubmitting ? 1 : 1.02,
+                  boxShadow: isSubmitting ? "none" : "0 10px 30px rgba(255, 107, 0, 0.3)",
                 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-tecdia-orange text-white font-semibold py-4 rounded-xl hover:bg-orange-600 transition-all duration-300 shadow-lg"
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className={`w-full font-semibold py-4 rounded-xl transition-all duration-300 shadow-lg ${
+                  isSubmitting 
+                    ? 'bg-tecdia-gray-400 cursor-not-allowed' 
+                    : 'bg-tecdia-orange text-white hover:bg-orange-600'
+                }`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>
