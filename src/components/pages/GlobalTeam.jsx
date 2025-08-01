@@ -14,7 +14,7 @@ const GlobalTeam = () => {
       description: 'Our main office and innovation hub where strategic decisions are made.',
       specialties: ['R&D', 'Strategic Planning', 'Global Operations'],
       teamSize: '45+',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
+      image: 'image - 4.jpg',
       story: 'Founded in 1976, Tokyo remains the heart of Tecdia\'s operations and innovation.'
     },
     {
@@ -25,7 +25,7 @@ const GlobalTeam = () => {
       description: 'Our US base for cutting-edge technology development and partnerships.',
       specialties: ['AI/ML', 'Software Development', 'Partnerships'],
       teamSize: '22+',
-      image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop',
+      image: 'image -10.jpg',
       story: 'Established in 1985, our Silicon Valley office connects us to the world\'s leading tech ecosystem.'
     },
     {
@@ -36,7 +36,7 @@ const GlobalTeam = () => {
       description: 'Our manufacturing facility producing high-quality components.',
       specialties: ['Manufacturing', 'Quality Control', 'Production'],
       teamSize: '120+',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+      image: 'cebu factory.png',
       story: 'Since 1993, Cebu has been our manufacturing excellence center.'
     },
     {
@@ -47,7 +47,7 @@ const GlobalTeam = () => {
       description: 'Regional operations and supply chain management.',
       specialties: ['Operations', 'Supply Chain', 'Regional Management'],
       teamSize: '35+',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+      image: 'taiwan.jpg',
       story: 'Our Taipei office manages critical operations across the Asia-Pacific region.'
     },
     {
@@ -58,7 +58,7 @@ const GlobalTeam = () => {
       description: 'Advanced research and development in electronics.',
       specialties: ['Electronics R&D', 'Innovation', 'Technology'],
       teamSize: '28+',
-      image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=300&fit=crop',
+      image: 'korea.png',
       story: 'Seoul\'s tech expertise drives our electronic component innovation.'
     },
     {
@@ -69,7 +69,7 @@ const GlobalTeam = () => {
       description: 'Multiple locations serving the Chinese market and manufacturing.',
       specialties: ['Market Development', 'Manufacturing', 'Local Operations'],
       teamSize: '85+',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+      image: 'china.jpg',
       story: 'Our presence across China enables us to serve this critical market effectively.'
     },
     {

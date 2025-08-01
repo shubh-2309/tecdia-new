@@ -32,7 +32,7 @@ const ShingoVision = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+            src="image -8.png"
             alt="Shingo Koyama"
             className="w-full h-full object-cover opacity-50"
           />

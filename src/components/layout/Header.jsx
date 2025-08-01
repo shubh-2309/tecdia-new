@@ -33,17 +33,17 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0 ml-0">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.15 }}
-              className="w-10 h-10 bg-gradient-to-br from-tecdia-blue to-blue-600 rounded-xl flex items-center justify-center"
-            >
-              <span className="text-white font-bold text-lg">T</span>
-            </motion.div>
-            <span className="text-xl font-poppins font-bold text-tecdia-gray-900">
-              Tecdia
-            </span>
+         <Link to="/" className="flex items-center space-x-2 flex-shrink-0 ml-0">
+         <motion.img
+         whileHover={{ scale: 1.05 }}
+         transition={{ duration: 0.15 }}
+         src="/tecdia logo.jpg"
+         alt="TECINDIA Logo"
+         className="w-10 h-10 rounded-xl object-cover"
+         />
+         <span className="text-xl font-poppins font-bold text-tecdia-gray-900">
+          TECINDIA
+          </span>
           </Link>
 
           {/* Desktop Navigation */}

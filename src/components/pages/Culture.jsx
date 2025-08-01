@@ -49,28 +49,28 @@ const Culture = () => {
       description: 'We encourage bold ideas and a free-thinking environment. Innovation here means solving real challenges, not just brainstorming buzzwords.',
       icon: '💡',
       color: 'from-tecdia-blue to-blue-600',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'
+      image: 'image -5.jpg'
     },
     {
       title: 'Respect for Diversity',
       description: 'With global offices and a cross-cultural team, we value every perspective. You belong here, just as you are.',
       icon: '🌍',
       color: 'from-tecdia-orange to-orange-600',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop'
+      image: 'image -9.jpg'
     },
     {
       title: 'People-First Approach',
       description: 'We value teamwork and kindness. No egos. Just great minds working together.',
       icon: '🤝',
       color: 'from-tecdia-green to-green-600',
-      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop'
+      image: 'image 2.jpg'
     },
     {
       title: 'Growth-Focused',
       description: 'We support your personal and professional development — every step of the way.',
       icon: '🚀',
       color: 'from-tecdia-saffron to-orange-500',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'
+      image: 'image -3.jpg'
     }
   ];
 

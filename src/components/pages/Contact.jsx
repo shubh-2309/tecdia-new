@@ -32,7 +32,7 @@ const Contact = () => {
       address: 'Tecdia Co. Ltd.\nTokyo Headquarters\n[Insert Address]',
       phone: '+81-XX-XXXX-XXXX',
       email: 'info@tecdia.com',
-      image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop',
+      image: 'image -6.jpg',
       description: 'Our headquarters and innovation hub'
     },
     {
@@ -42,7 +42,7 @@ const Contact = () => {
       address: 'Tecdia USA\nSilicon Valley Office\n[Insert Address]',
       phone: '+1-XXX-XXX-XXXX',
       email: 'us@tecdia.com',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+      image: 'silicon.png',
       description: 'Our technology hub in the heart of innovation'
     }
   ];
