@@ -47,30 +47,22 @@ const Culture = () => {
     {
       title: 'Innovation with Intention',
       description: 'We encourage bold ideas and a free-thinking environment. Innovation here means solving real challenges, not just brainstorming buzzwords.',
-      icon: '💡',
-      color: 'from-tecdia-blue to-blue-600',
-      image: 'image -5.jpg'
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'
     },
     {
       title: 'Respect for Diversity',
       description: 'With global offices and a cross-cultural team, we value every perspective. You belong here, just as you are.',
-      icon: '🌍',
-      color: 'from-tecdia-orange to-orange-600',
-      image: 'image -9.jpg'
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop'
     },
     {
       title: 'People-First Approach',
       description: 'We value teamwork and kindness. No egos. Just great minds working together.',
-      icon: '🤝',
-      color: 'from-tecdia-green to-green-600',
-      image: 'image 2.jpg'
+      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop'
     },
     {
       title: 'Growth-Focused',
       description: 'We support your personal and professional development — every step of the way.',
-      icon: '🚀',
-      color: 'from-tecdia-saffron to-orange-500',
-      image: 'image -3.jpg'
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'
     }
   ];
 
@@ -184,19 +176,7 @@ const Culture = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
-                  <motion.div
-                    className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-105 transition-transform duration-300`}
-                    animate={{
-                      scale: [1, 1.02, 1],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {value.icon}
-                  </motion.div>
+              
                   <h3 className="text-2xl font-poppins font-bold text-tecdia-gray-900 mb-4">
                     {value.title}
                   </h3>

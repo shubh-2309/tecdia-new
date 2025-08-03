@@ -11,29 +11,25 @@ const AboutUs = () => {
     {
       title: t('about.products.rf.title'),
       description: t('about.products.rf.description'),
-      icon: '📡',
       image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=300&fit=crop',
       learnMore: '#'
     },
     {
       title: t('about.products.ceramics.title'),
       description: t('about.products.ceramics.description'),
-      icon: '🏺',
-      image: 'manufacturing.png',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
       learnMore: '#'
     },
     {
       title: t('about.products.laser.title'),
       description: t('about.products.laser.description'),
-      icon: '⚡',
-      image: 'laser.jpg',
+      image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop',
       learnMore: '#'
     },
     {
       title: t('about.products.manufacturing.title'),
       description: t('about.products.manufacturing.description'),
-      icon: '🏭',
-      image: 'ceramic.png',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
       learnMore: '#'
     }
   ];
@@ -221,10 +217,10 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '45+', label: t('about.stats.years'), icon: '📅' },
-              { number: '10+', label: t('about.stats.countries'), icon: '🌍' },
-              { number: '450+', label: t('about.stats.employees'), icon: '👥' },
-              { number: '1000+', label: t('about.stats.products'), icon: '🏭' }
+              { number: '45+', label: t('about.stats.years') },
+              { number: '10+', label: t('about.stats.countries')},
+              { number: '450+', label: t('about.stats.employees') },
+              { number: '1000+', label: t('about.stats.products') }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

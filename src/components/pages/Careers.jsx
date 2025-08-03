@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 const Careers = () => {
   const [selectedRole, setSelectedRole] = useState('all');
@@ -17,7 +19,6 @@ const Careers = () => {
       location: 'Tokyo',
       type: 'Full-time',
       remote: 'Hybrid',
-      icon: '🔬',
       description: 'Drive innovation in cutting-edge technologies and research.',
       requirements: ['Research Experience', 'Advanced Degree', 'Innovation Mindset', '5+ years experience']
     },
@@ -28,7 +29,6 @@ const Careers = () => {
       location: 'Bangalore',
       type: 'Full-time',
       remote: 'On-site',
-      icon: '✅',
       description: 'Ensure excellence in our manufacturing processes and products.',
       requirements: ['Quality Management', 'ISO Standards', 'Attention to Detail', '3+ years experience']
     },
@@ -39,7 +39,6 @@ const Careers = () => {
       location: 'San Francisco',
       type: 'Full-time',
       remote: 'Remote',
-      icon: '💻',
       description: 'Build scalable applications and lead technical initiatives.',
       requirements: ['React', 'Node.js', 'AWS', '5+ years experience']
     },
@@ -50,7 +49,6 @@ const Careers = () => {
       location: 'Tokyo',
       type: 'Full-time',
       remote: 'Hybrid',
-      icon: '📈',
       description: 'Lead sales initiatives and build client relationships in Japan.',
       requirements: ['B2B Sales', 'Japanese Market', 'CRM', '3+ years experience']
     },
@@ -61,7 +59,6 @@ const Careers = () => {
       location: 'San Francisco',
       type: 'Full-time',
       remote: 'Remote',
-      icon: '🌍',
       description: 'Expand our global reach and build international partnerships.',
       requirements: ['International Sales', 'Communication', 'Market Research', '3+ years experience']
     },
@@ -72,7 +69,6 @@ const Careers = () => {
       location: 'Bangalore',
       type: 'Full-time',
       remote: 'Hybrid',
-      icon: '📦',
       description: 'Manage import/export operations and logistics.',
       requirements: ['Trade Operations', 'Logistics', 'Documentation', '2+ years experience']
     },
@@ -83,7 +79,6 @@ const Careers = () => {
       location: 'Taipei',
       type: 'Full-time',
       remote: 'On-site',
-      icon: '🏭',
       description: 'Oversee manufacturing processes and production efficiency.',
       requirements: ['Manufacturing', 'Process Optimization', 'Team Leadership', '4+ years experience']
     },
@@ -94,7 +89,6 @@ const Careers = () => {
       location: 'Tokyo',
       type: 'Full-time',
       remote: 'Hybrid',
-      icon: '📋',
       description: 'Support our global operations and ensure smooth processes.',
       requirements: ['Administration', 'Coordination', 'Communication', '2+ years experience']
     }
@@ -103,24 +97,21 @@ const Careers = () => {
   const departments = [
     {
       name: 'Technical',
-      icon: '🛠️',
       description: 'Drive innovation in R&D, Quality Control, and IT Development.',
-      color: 'from-tecdia-blue to-blue-600',
-      roles: ['R&D', 'Quality Control / Quality Assurance', 'IT Development']
+      roles: ['R&D', 'Quality Control / Quality Assurance', 'IT Development'],
+      image:'https://www.bing.com/images/search?q=Technical+Expertise+Icon&form=IRTRRL&fi'
     },
     {
       name: 'Sales',
-      icon: '📈',
       description: 'Build lasting relationships and drive growth across markets.',
-      color: 'from-tecdia-orange to-orange-600',
-      roles: ['Domestic & Global Sales']
+      roles: ['Domestic & Global Sales'],
+      image:''
     },
     {
       name: 'Administrative',
-      icon: '📦',
       description: 'Support our global operations and ensure excellence.',
-      color: 'from-tecdia-green to-green-600',
-      roles: ['Trade Operations', 'Import/Export', 'Production Management', 'General Affairs']
+      roles: ['Trade Operations', 'Import/Export', 'Production Management', 'General Affairs'],
+      image:''
     }
   ];
 
@@ -276,11 +267,11 @@ const Careers = () => {
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-6 text-sm text-tecdia-gray-500">
                       <span className="flex items-center">
-                        <span className="mr-2">📍</span>
+                        <MapPin className="w-5 h-5 mr-2 text-gray-600" />
                         {job.location}
                       </span>
                       <span className="flex items-center">
-                        <span className="mr-2">⏰</span>
+                         <Clock className="w-5 h-5 mr-2 text-gray-600" />
                         {job.type}
                       </span>
                     </div>
@@ -375,24 +366,12 @@ const Careers = () => {
                 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-white to-tecdia-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-tecdia-gray-100">
-                  <motion.div
-                    className={`w-16 h-16 bg-gradient-to-br ${dept.color} rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-105 transition-transform duration-300`}
-                    animate={{
-                      scale: [1, 1.02, 1],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {dept.icon}
-                  </motion.div>
-                  <h3 className="text-2xl font-poppins font-bold text-tecdia-gray-900 mb-4">
+                <div className="bg-gradient-to-br from-white to-tecdia-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-tecdia-gray-100 flex flex-col h-full">
+                  
+                  <h3 className="text-2xl font-bold text-tecdia-gray-900 mb-4">
                     {dept.name}
                   </h3>
-                  <p className="text-tecdia-gray-600 leading-relaxed text-lg mb-6">
+                  <p className="text-tecdia-gray-600 leading-relaxed text-lg mb-6 flex-grow">
                     {dept.description}
                   </p>
                   <div className="space-y-2">
