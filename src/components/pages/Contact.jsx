@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ApiService from '../../services/api';
+import {
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,8 +24,7 @@ const Contact = () => {
     {
       country: 'India',
       city: 'Bangalore',
-      flag: '🇮🇳',
-      address: 'Tecdia India Pvt. Ltd.\n[Insert Exact Location or Keep Placeholder]',
+      address: 'Tecdia India Pvt. Ltd.\nBanglore\n[Insert Address]',
       phone: '+91-XXXXXXXXXX',
       email: 'recruit@tecdia.com',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
@@ -28,21 +33,19 @@ const Contact = () => {
     {
       country: 'Japan',
       city: 'Tokyo',
-      flag: '🇯🇵',
       address: 'Tecdia Co. Ltd.\nTokyo Headquarters\n[Insert Address]',
       phone: '+81-XX-XXXX-XXXX',
       email: 'info@tecdia.com',
-      image: 'image -6.jpg',
+      image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop',
       description: 'Our headquarters and innovation hub'
     },
     {
       country: 'USA',
       city: 'Silicon Valley',
-      flag: '🇺🇸',
       address: 'Tecdia USA\nSilicon Valley Office\n[Insert Address]',
       phone: '+1-XXX-XXX-XXXX',
       email: 'us@tecdia.com',
-      image: 'silicon.png',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
       description: 'Our technology hub in the heart of innovation'
     }
   ];
@@ -183,7 +186,7 @@ const Contact = () => {
                     
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <span className="text-tecdia-orange text-lg">📍</span>
+                          <MapPin className="w-5 h-5 mr-2 text-gray-600" />
                         <div>
                           <h4 className="font-semibold text-tecdia-gray-900 mb-1">Address</h4>
                           <p className="text-sm text-tecdia-gray-600 whitespace-pre-line">
@@ -193,7 +196,7 @@ const Contact = () => {
                       </div>
                       
                       <div className="flex items-center space-x-3">
-                        <span className="text-tecdia-orange text-lg">📞</span>
+                         <Phone className="w-5 h-5 mr-2 text-gray-600" />
                         <div>
                           <h4 className="font-semibold text-tecdia-gray-900 mb-1">Phone</h4>
                           <p className="text-sm text-tecdia-gray-600">{office.phone}</p>
@@ -201,7 +204,7 @@ const Contact = () => {
                       </div>
                       
                       <div className="flex items-center space-x-3">
-                        <span className="text-tecdia-orange text-lg">📧</span>
+                        <Mail className="w-5 h-5 mr-2 text-gray-600" />
                         <div>
                           <h4 className="font-semibold text-tecdia-gray-900 mb-1">Email</h4>
                           <p className="text-sm text-tecdia-gray-600">{office.email}</p>
@@ -368,26 +371,26 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-tecdia-blue to-blue-600 rounded-3xl p-8 text-white"
+              className="bg-gradient-to-br from-tecdia-gray-100 to-tecdia-gray-200 rounded-3xl p-8"
             >
               <h3 className="text-2xl font-poppins font-bold mb-6">Social Media</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <span className="text-2xl">🔗</span>
+                   <FaLinkedin className="w-5 h-5 text-blue-600 mr-2" />
                   <div>
                     <h4 className="font-semibold">LinkedIn</h4>
                     <p className="text-sm opacity-90">[LinkedIn Profile Link]</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <span className="text-2xl">📱</span>
+                  <FaTwitter className="w-5 h-5 text-sky-500 mr-2" />
                   <div>
                     <h4 className="font-semibold">Twitter</h4>
                     <p className="text-sm opacity-90">@TecdiaGlobal</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <span className="text-2xl">📸</span>
+                  <FaInstagram className="w-5 h-5 text-pink-600 mr-2" />
                   <div>
                     <h4 className="font-semibold">Instagram</h4>
                     <p className="text-sm opacity-90">@tecdiaglobal</p>
@@ -402,9 +405,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-tecdia-gray-100 to-tecdia-gray-200 rounded-3xl p-8"
+              className="bg-gradient-to-br from-tecdia-blue to-blue-600 rounded-3xl p-8 text-white"
             >
-              <h3 className="text-2xl font-poppins font-bold text-tecdia-gray-900 mb-6">Location</h3>
+              <h3 className="text-2xl font-poppins font-bold text-tecdia-white-900 mb-6">Location</h3>
               <div className="aspect-video bg-tecdia-gray-300 rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-4xl mb-4">🗺️</div>

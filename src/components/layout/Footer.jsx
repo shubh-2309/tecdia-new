@@ -11,7 +11,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/tecdia logo.jpg" alt="Logo" className="w-6 h-6 object-contain" />
+              <div className="w-8 h-8 bg-tecdia-blue rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">T</span>
+              </div>
               <span className="text-xl font-poppins font-bold">
                 Tecdia Global
               </span>

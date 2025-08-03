@@ -12,7 +12,7 @@ const RecruitmentProcess = () => {
       id: 1,
       title: 'Application Submission',
       description: 'Submit your resume or OPEN ES via email or LINE.',
-      icon: '📝',
+      icon: '1',
       details: 'Start your journey by submitting your application through our preferred channels. We accept both traditional resumes and the Japanese OPEN ES format.',
       duration: '1-2 days',
       color: 'from-tecdia-blue to-blue-600'
@@ -21,7 +21,7 @@ const RecruitmentProcess = () => {
       id: 2,
       title: 'Information Session',
       description: 'Online or in-person company introduction + Q&A with employees.',
-      icon: '💬',
+      icon: '2',
       details: 'Learn about Tecdia\'s culture, values, and opportunities through an interactive session with our team members.',
       duration: '1 hour',
       color: 'from-tecdia-orange to-orange-600'
@@ -30,7 +30,7 @@ const RecruitmentProcess = () => {
       id: 3,
       title: 'Document Screening',
       description: 'Our HR team will review your resume.',
-      icon: '📋',
+      icon: '3',
       details: 'Our experienced HR team carefully evaluates your qualifications, experience, and alignment with our company values.',
       duration: '3-5 days',
       color: 'from-tecdia-green to-green-600'
@@ -39,7 +39,7 @@ const RecruitmentProcess = () => {
       id: 4,
       title: 'Web Test',
       description: 'Evaluate your basic skills.',
-      icon: '💻',
+      icon: '4',
       details: 'Complete an online assessment to evaluate your technical skills, problem-solving abilities, and cultural fit.',
       duration: '1-2 hours',
       color: 'from-tecdia-saffron to-orange-500'
@@ -48,7 +48,7 @@ const RecruitmentProcess = () => {
       id: 5,
       title: 'First Interview',
       description: 'One-on-one with an HR team member (online available).',
-      icon: '👥',
+      icon: '5',
       details: 'Meet with our HR team to discuss your background, career goals, and how you can contribute to Tecdia\'s mission.',
       duration: '45-60 minutes',
       color: 'from-tecdia-blue to-blue-600'
@@ -57,7 +57,7 @@ const RecruitmentProcess = () => {
       id: 6,
       title: 'Final Interview',
       description: 'In-person interview with our President (mandatory physical presence).',
-      icon: '👨‍💼',
+      icon: '6',
       details: 'The final step involves meeting with our President, Shingo Koyama, to discuss your vision and potential role at Tecdia.',
       duration: '1 hour',
       color: 'from-tecdia-orange to-orange-600'
@@ -66,7 +66,7 @@ const RecruitmentProcess = () => {
       id: 7,
       title: 'Job Offer',
       description: 'Welcome to Tecdia.',
-      icon: '🎉',
+      icon: '7',
       details: 'Congratulations! You\'ll receive a formal offer letter and begin your onboarding process to join the Tecdia family.',
       duration: '1-2 weeks',
       color: 'from-tecdia-green to-green-600'

@@ -8,73 +8,66 @@ const GlobalTeam = () => {
   const globalOffices = [
     {
       country: 'Japan',
-      flag: '🇯🇵',
       city: 'Tokyo',
       type: 'Headquarters',
       description: 'Our main office and innovation hub where strategic decisions are made.',
       specialties: ['R&D', 'Strategic Planning', 'Global Operations'],
       teamSize: '45+',
-      image: 'image - 4.jpg',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
       story: 'Founded in 1976, Tokyo remains the heart of Tecdia\'s operations and innovation.'
     },
     {
       country: 'USA',
-      flag: '🇺🇸',
       city: 'Silicon Valley',
       type: 'Technology Hub',
       description: 'Our US base for cutting-edge technology development and partnerships.',
       specialties: ['AI/ML', 'Software Development', 'Partnerships'],
       teamSize: '22+',
-      image: 'image -10.jpg',
+      image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop',
       story: 'Established in 1985, our Silicon Valley office connects us to the world\'s leading tech ecosystem.'
     },
     {
       country: 'Philippines',
-      flag: '🇵🇭',
       city: 'Cebu',
       type: 'Manufacturing',
       description: 'Our manufacturing facility producing high-quality components.',
       specialties: ['Manufacturing', 'Quality Control', 'Production'],
       teamSize: '120+',
-      image: 'cebu factory.png',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
       story: 'Since 1993, Cebu has been our manufacturing excellence center.'
     },
     {
       country: 'Taiwan',
-      flag: '🇹🇼',
       city: 'Taipei',
       type: 'Operations',
       description: 'Regional operations and supply chain management.',
       specialties: ['Operations', 'Supply Chain', 'Regional Management'],
       teamSize: '35+',
-      image: 'taiwan.jpg',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
       story: 'Our Taipei office manages critical operations across the Asia-Pacific region.'
     },
     {
       country: 'Korea',
-      flag: '🇰🇷',
       city: 'Seoul',
       type: 'R&D Center',
       description: 'Advanced research and development in electronics.',
       specialties: ['Electronics R&D', 'Innovation', 'Technology'],
       teamSize: '28+',
-      image: 'korea.png',
+      image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=300&fit=crop',
       story: 'Seoul\'s tech expertise drives our electronic component innovation.'
     },
     {
       country: 'China',
-      flag: '🇨🇳',
       city: 'Shanghai, Shenzhen, Chengdu',
       type: 'Regional Offices',
       description: 'Multiple locations serving the Chinese market and manufacturing.',
       specialties: ['Market Development', 'Manufacturing', 'Local Operations'],
       teamSize: '85+',
-      image: 'china.jpg',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
       story: 'Our presence across China enables us to serve this critical market effectively.'
     },
     {
       country: 'Vietnam',
-      flag: '🇻🇳',
       city: 'Ho Chi Minh City',
       type: 'Manufacturing',
       description: 'Emerging manufacturing capabilities and cost optimization.',
@@ -85,7 +78,6 @@ const GlobalTeam = () => {
     },
     {
       country: 'Australia',
-      flag: '🇦🇺',
       city: 'Sydney',
       type: 'Regional Office',
       description: 'Oceania operations and market development.',
@@ -96,7 +88,6 @@ const GlobalTeam = () => {
     },
     {
       country: 'Europe',
-      flag: '🇪🇺',
       city: 'Amsterdam',
       type: 'European Hub',
       description: 'Our European headquarters opened in 2014.',
@@ -107,7 +98,6 @@ const GlobalTeam = () => {
     },
     {
       country: 'India',
-      flag: '🇮🇳',
       city: 'Bangalore',
       type: 'Technology Center',
       description: 'Our technology and R&D center in India.',
@@ -125,7 +115,6 @@ const GlobalTeam = () => {
       location: 'Tokyo, Japan',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
       story: '"Working at Tecdia has allowed me to work on cutting-edge technologies while being part of a truly global team. The collaborative environment here is unmatched."',
-      flag: '🇯🇵'
     },
     {
       name: 'Sarah Chen',
@@ -133,7 +122,6 @@ const GlobalTeam = () => {
       location: 'Silicon Valley, USA',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face',
       story: '"The diversity of perspectives at Tecdia is incredible. Every day I learn something new from colleagues around the world."',
-      flag: '🇺🇸'
     },
     {
       name: 'Rajesh Kumar',
@@ -141,7 +129,6 @@ const GlobalTeam = () => {
       location: 'Bangalore, India',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
       story: '"Tecdia\'s commitment to innovation and global collaboration has given me opportunities I never thought possible."',
-      flag: '🇮🇳'
     },
     {
       name: 'Maria Santos',
@@ -149,7 +136,6 @@ const GlobalTeam = () => {
       location: 'Cebu, Philippines',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
       story: '"Being part of Tecdia\'s manufacturing excellence team has taught me the importance of precision and quality in everything we do."',
-      flag: '🇵🇭'
     }
   ];
 
@@ -210,17 +196,16 @@ const GlobalTeam = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '10+', label: 'Countries', icon: '🌍' },
-              { number: '450+', label: 'Team Members', icon: '👥' },
-              { number: '8+', label: 'Languages', icon: '🗣️' },
-              { number: '12+', label: 'Time Zones', icon: '⏰' }
+              { number: '10+', label: 'Countries' },
+              { number: '450+', label: 'Team Members'},
+              { number: '8+', label: 'Languages'},
+              { number: '12+', label: 'Time Zones' }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="text-center"
               >
                 <motion.div
