@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
-  base: "/tecdia-new/", // Add this line
+  base: "./", // Add this line
   plugins: [react()],
 });
